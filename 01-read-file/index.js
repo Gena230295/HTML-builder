@@ -6,3 +6,5 @@ const fileHtml = fs.createReadStream(absPath);
 fileHtml.on('data', (myFile) => {
   console.log(String(myFile));
 });
+
+// node 01-read-file

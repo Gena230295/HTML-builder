@@ -21,3 +21,5 @@ process.on('SIGINT', () => {
   console.log('You have finished entering text.');
   process.exit();
 });
+
+// node 02-write-file
