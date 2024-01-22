@@ -19,7 +19,7 @@ fs.readdir(absPath, (err, allFolder) => {
             const extName = nameFile
               .slice(nameFile.length - 1, nameFile.length)
               .join('');
-            const finStr = `${firstName} - ${extName} - ${sizeKb}`;
+            const finStr = `${firstName} - ${extName} - ${sizeKb}kb`;
             console.log(finStr);
           }
         }
