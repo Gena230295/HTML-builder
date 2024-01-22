@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const process = require('process');
 const processStDin = require('process').stdin;
-const processStDout = require('process').stdout;
 
 const absPath = path.join(__dirname, 'text.txt');
 fs.appendFile(absPath, '', () => {
@@ -10,7 +9,6 @@ fs.appendFile(absPath, '', () => {
 });
 
 processStDin.on('data', (change) => {
-  processStDout.write(String(change));
   fs.appendFile(absPath, change, () => {});
   const checkWord = String(change).trim();
   if (checkWord === 'exit') {
