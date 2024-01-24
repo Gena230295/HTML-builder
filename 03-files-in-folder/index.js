@@ -13,13 +13,13 @@ fs.readdir(absPath, (err, allFolder) => {
           console.log(err);
         } else {
           if (newEl.isFile()) {
-            const sizeKb = newEl.size / 1000;
+            const sizeKb = (newEl.size / 1024).toFixed(3);
             const nameFile = el.split('.');
             const firstName = nameFile.slice(0, nameFile.length - 1).join('.');
             const extName = nameFile
               .slice(nameFile.length - 1, nameFile.length)
               .join('');
-            const finStr = `${firstName} - ${extName} - ${sizeKb}kb`;
+            const finStr = `${firstName} - ${extName} - ${sizeKb}kB`;
             console.log(finStr);
           }
         }
